@@ -1,0 +1,44 @@
+id: check-dam
+name: Check dam / leaky dam
+type: natural_flood_management
+description: Slow water movement in a ditch, gully, or small channel using a small permeable structure.
+
+suitable_when:
+  - small flow path or ditch
+  - aim is to slow water and trap sediment
+  - safe overflow route exists
+  - materials are locally available
+
+avoid_when:
+  - main river or high-risk watercourse without expert design
+  - structure could redirect flood water toward buildings or roads
+  - fish passage or protected habitat concerns are unresolved
+  - land drainage obligations are unclear
+
+typical_tasks:
+  - identify candidate location
+  - check permissions and downstream risks
+  - take before photos upstream and downstream
+  - record GPS location
+  - gather materials
+  - install structure
+  - confirm overflow route
+  - take after photos
+  - record dimensions
+  - inspect after first heavy rain
+
+required_evidence:
+  - before_photo_upstream
+  - before_photo_downstream
+  - gps_location
+  - after_photo_upstream
+  - after_photo_downstream
+  - dimensions
+  - materials_record
+  - inspection_note
+
+maintenance:
+  - inspect after storms
+  - clear problematic blockages if needed
+  - repair erosion around edges
+  - check downstream impact
