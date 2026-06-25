@@ -1,0 +1,46 @@
+id: tree-planting
+name: Tree planting
+type: woodland_and_agroforestry
+description: Plant trees for habitat, shelter, soil, water, timber, agroforestry, or landscape resilience.
+
+suitable_when:
+  - shelter or shade is useful
+  - runoff interception is useful
+  - habitat connectivity can be improved
+  - long-term management is acceptable
+  - species match site conditions
+
+avoid_when:
+  - deep peat or protected open habitat could be damaged
+  - planting would conflict with archaeology or utilities
+  - long-term maintenance cannot be provided
+  - species choice is poorly matched to site
+
+typical_tasks:
+  - select planting area
+  - check constraints and permissions
+  - choose species mix
+  - order trees and guards
+  - prepare ground
+  - take before photos
+  - record GPS area or line
+  - plant trees
+  - install guards/protection
+  - take after photos
+  - schedule maintenance visits
+
+required_evidence:
+  - planting_plan
+  - species_list
+  - before_photo
+  - gps_boundary_or_line
+  - delivery_note_or_invoice
+  - after_photo
+  - survival_inspection
+
+maintenance:
+  - weed control
+  - replace failed trees if required
+  - inspect guards and stakes
+  - manage browsing damage
+  - monitor survival rate
