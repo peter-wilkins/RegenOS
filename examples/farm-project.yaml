@@ -1,0 +1,56 @@
+id: example-wet-corner-project
+name: Wet corner restoration demo
+status: draft
+
+landholding:
+  name: Example Farm
+  country: UK
+  region: England
+  boundary: null
+
+goals:
+  - slow water
+  - create wildlife habitat
+  - reduce low-value wet field problems
+  - generate fundable, evidenced work package
+
+interventions:
+  - id: pond-1
+    template: pond
+    status: proposed
+    location: null
+    notes: Create a small wildlife pond in a wet corner.
+  - id: check-dam-1
+    template: check-dam
+    status: proposed
+    location: null
+    notes: Slow flow in small ditch above pond area.
+  - id: check-dam-2
+    template: check-dam
+    status: proposed
+    location: null
+    notes: Second structure upstream if safe and permitted.
+  - id: trees-1
+    template: tree-planting
+    status: proposed
+    location: null
+    notes: Plant mixed trees around wet corner, avoiding shading the whole pond.
+
+funding:
+  status: unknown
+  candidate_sources: []
+
+tasks:
+  generated_by: intervention_templates
+  exported_to_jobdone: false
+
+evidence_pack:
+  status: not_started
+  required:
+    - before photos
+    - GPS locations
+    - map/sketch
+    - invoices or labour records
+    - after photos
+    - dimensions
+    - inspection notes
