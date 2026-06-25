@@ -1,0 +1,84 @@
+# Draft RegenOS -> JobDone work package shape.
+# This should stay simple until tested in the field.
+
+work_package:
+  id: wet-corner-demo-work-package
+  project_id: example-wet-corner-project
+  title: Wet corner restoration demo
+  status: draft
+
+interventions:
+  - id: pond-1
+    template: pond
+    title: Create wildlife pond
+    location: null
+    evidence_required:
+      - before_photo
+      - gps_location
+      - after_photo
+      - dimensions
+      - invoice_or_labour_record
+  - id: check-dam-1
+    template: check-dam
+    title: Install first check dam
+    location: null
+    evidence_required:
+      - before_photo_upstream
+      - before_photo_downstream
+      - gps_location
+      - after_photo_upstream
+      - after_photo_downstream
+      - dimensions
+
+jobs:
+  - id: task-001
+    intervention_id: pond-1
+    title: Take pond before photos
+    description: Take clear photos of the proposed pond site before work begins.
+    phase: before_work
+    assignee: null
+    location: null
+    evidence_required:
+      - type: photo
+        count_min: 2
+        notes: Include wider context and close view.
+    completion_criteria:
+      - At least two photos uploaded.
+      - GPS metadata present or manually confirmed.
+
+  - id: task-002
+    intervention_id: pond-1
+    title: Record pond GPS location
+    description: Record the proposed pond centre point or boundary.
+    phase: before_work
+    assignee: null
+    location: null
+    evidence_required:
+      - type: gps_point_or_polygon
+    completion_criteria:
+      - Location recorded and reviewed.
+
+  - id: task-003
+    intervention_id: check-dam-1
+    title: Install check dam
+    description: Install small check dam only after permissions and downstream risks have been checked.
+    phase: delivery
+    assignee: null
+    location: null
+    evidence_required:
+      - type: after_photo_upstream
+      - type: after_photo_downstream
+      - type: measurement
+        fields:
+          - height
+          - width
+          - overflow_route
+    completion_criteria:
+      - Structure photographed.
+      - Measurements recorded.
+      - Overflow route noted.
+
+export:
+  target: JobDone
+  format: yaml
+  version: draft-0.1
