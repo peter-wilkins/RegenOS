@@ -1,0 +1,44 @@
+id: pond
+name: Pond
+type: water_and_habitat
+description: Create or restore a pond for water storage, habitat, and landscape resilience.
+
+suitable_when:
+  - wet corner or low productivity area
+  - opportunity to slow, store, or infiltrate water
+  - habitat creation is a priority
+  - spoil can be managed responsibly
+
+avoid_when:
+  - protected habitat could be damaged without consent
+  - archaeology or underground services are unknown
+  - unsafe embankment or dam structure would be required
+  - polluted runoff would be directed into the pond
+
+typical_tasks:
+  - site survey
+  - consent and constraint check
+  - mark out pond
+  - take before photos
+  - record GPS location
+  - check access for machinery
+  - excavate pond
+  - shape banks and margins
+  - manage spoil
+  - take after photos
+  - record dimensions
+  - schedule inspection
+
+required_evidence:
+  - before_photo
+  - gps_location
+  - after_photo
+  - dimensions
+  - invoice_or_labour_record
+  - map_or_sketch
+
+maintenance:
+  - inspect after heavy rain
+  - check erosion and bank stability
+  - monitor vegetation establishment
+  - manage invasive species if present
