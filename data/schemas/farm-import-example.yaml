@@ -1,0 +1,61 @@
+# Draft canonical farm import shape.
+# This is not final. It is a target for importers to convert into.
+
+source:
+  type: uploaded_file
+  filename: example-farm-boundaries.geojson
+  imported_at: null
+  imported_by: null
+  confidence: draft
+
+holding:
+  id: example-farm
+  name: Example Farm
+  country: UK
+  region: England
+
+fields:
+  - id: field-north-12
+    source_id: N12
+    name: North 12
+    area_ha: 12.4
+    geometry:
+      type: Polygon
+      coordinates: []
+    current_crop:
+      year: 2026
+      crop: winter_wheat
+    crop_history:
+      - year: 2025
+        crop: spring_barley
+      - year: 2024
+        crop: oilseed_rape
+    notes:
+      - Wet corner by lower ditch.
+
+soil_samples:
+  - id: sample-1
+    field_id: field-north-12
+    sampled_at: null
+    location:
+      lat: null
+      lon: null
+    results:
+      ph: null
+      organic_matter_percent: null
+      phosphorus_index: null
+      potassium_index: null
+      magnesium_index: null
+    source_id: null
+
+observations:
+  - id: obs-1
+    field_id: field-north-12
+    type: wet_area
+    geometry: null
+    notes: Farmer-marked wet patch or imported observation.
+
+provenance:
+  transformation_notes:
+    - Imported from draft source.
+    - Geometry should be reviewed before use.
