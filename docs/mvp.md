@@ -13,6 +13,16 @@ Start by proving that RegenOS can turn a restoration project into:
 - field evidence prompts
 - an evidence pack
 
+## First user
+
+The first MVP user is a farmer or landowner.
+
+This keeps the first version grounded in the person who has the land, the
+problem, and the responsibility for deciding whether work is worth doing.
+Advisers, contractors, and funders matter later, but the first loop should help
+a farmer or landowner move from "something could be done here" to a practical,
+evidenced work package.
+
 ## Suggested first project type
 
 A small water restoration project:
