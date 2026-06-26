@@ -116,3 +116,17 @@ Build a local, reproducible command that:
 5. writes an ignored HTML/GeoJSON report for Peter to inspect
 
 The report should label every candidate as `clue`, not `recommendation`.
+
+## Phone-walk MVP
+
+The first usable output can be for Peter only:
+
+- generate a phone-friendly map page
+- draw the known field boundaries
+- highlight fields that look interesting from name and risk clues
+- let Peter walk the farm and ground-truth those places
+- record observations before generating any intervention recommendation
+
+This keeps the MVP honest. The map says "go and look here", not "build this".
+An OS map overlay would be useful later, but the first version can use an open
+web map base plus the farm KML boundaries.
