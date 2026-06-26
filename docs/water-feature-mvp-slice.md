@@ -130,3 +130,16 @@ The first usable output can be for Peter only:
 This keeps the MVP honest. The map says "go and look here", not "build this".
 An OS map overlay would be useful later, but the first version can use an open
 web map base plus the farm KML boundaries.
+
+## Next MVP step
+
+Turn the phone map into an offline field notebook:
+
+- capture current GPS position
+- attach one or more photos
+- add quick notes
+- associate the observation with the nearest/clicked field
+- store everything locally first
+- export or sync later
+
+See [`offline-field-notebook.md`](offline-field-notebook.md).
