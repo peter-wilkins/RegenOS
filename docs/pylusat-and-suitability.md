@@ -4,6 +4,14 @@ PyLUSAT is a useful reference point because it points toward the spatial problem
 
 > Given a set of map layers and criteria, where is the best place to do a particular thing?
 
+Current decision: use PyLUSAT as prior art and possibly as a dependency, but do
+not fork it yet.
+
+RegenOS should first prove its own farmer-facing workflow. PyLUSAT covers useful
+generic geospatial operations. RegenOS needs to connect those operations to
+restoration choices, work packages, JobDone tasks, and evidence capture. Forking
+only makes sense if a real integration slice shows PyLUSAT blocks that flow.
+
 For RegenOS, the questions might be:
 
 - Where should ponds go?
