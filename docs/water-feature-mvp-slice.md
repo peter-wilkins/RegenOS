@@ -143,3 +143,11 @@ Turn the phone map into an offline field notebook:
 - export or sync later
 
 See [`offline-field-notebook.md`](offline-field-notebook.md).
+
+## JobDone page decision
+
+The practical capture surface should be JobDone, not a separate RegenOS phone
+app.
+
+The first JobDone page should show ranked map pins, not all field polygons.
+See [`jobdone-water-walk-page.md`](jobdone-water-walk-page.md).

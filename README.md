@@ -40,6 +40,7 @@ That makes this a natural integration point for **JobDone**: JobDone can become 
 - [`docs/vision.md`](docs/vision.md) — what this project is trying to become.
 - [`docs/mvp.md`](docs/mvp.md) — first useful version.
 - [`docs/jobdone-integration.md`](docs/jobdone-integration.md) — how grant evidence becomes field tasks.
+- [`docs/jobdone-water-walk-page.md`](docs/jobdone-water-walk-page.md) — first JobDone page for water-walk pins and evidence capture.
 - [`docs/grant-model.md`](docs/grant-model.md) — country-independent grant/funding model.
 - [`docs/intervention-templates.md`](docs/intervention-templates.md) — reusable templates for real-world work.
 - [`docs/pylusat-and-suitability.md`](docs/pylusat-and-suitability.md) — notes on land suitability analysis.
