@@ -208,3 +208,24 @@ site data at scale.
 4. Generate a draft JobDone work package from the chosen option.
 
 This proves the graph shape without building a universal grant scraper.
+
+## Current scripts
+
+Find candidate options:
+
+```bash
+python3 scripts/query_grants.py check-dam --facts '{"watercourse":{"width_m":1.8}}'
+```
+
+Generate a draft JobDone work package:
+
+```bash
+python3 scripts/generate_work_package.py \
+  --project-id dewlish-water-walk \
+  --intervention-id check-dam-001 \
+  --template check-dam \
+  --funding-option uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+```
+
+The output is a draft. It should be treated as a planning and evidence prompt,
+not as confirmation that a grant application will succeed.

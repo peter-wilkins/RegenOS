@@ -54,3 +54,13 @@ python3 scripts/query_grants.py check-dam --facts '{"watercourse":{"width_m":1.8
 This should return candidate funding options, rule states, and evidence prompts.
 It is deliberately small: prove the linked records are useful before adding a
 database or scraper.
+
+To generate a draft JobDone work package from a selected option:
+
+```bash
+python3 scripts/generate_work_package.py \
+  --project-id dewlish-water-walk \
+  --intervention-id check-dam-001 \
+  --template check-dam \
+  --funding-option uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+```
