@@ -24,6 +24,8 @@ Grant guidance is not one flat table. It links:
 - JobDone tasks
 - evidence captures
 - claims
+- lifecycle gates
+- submission tasks
 
 The useful graph is the set of links between those things.
 
@@ -123,6 +125,20 @@ Evidence requirements become tasks or prompts, such as:
 - record dimensions
 - schedule inspection
 
+### Lifecycle gate
+
+A lifecycle gate says whether the grant job is allowed to move to the next
+stage.
+
+Examples:
+
+- work cannot start before the agreement start date
+- application cannot be submitted until land parcels and maps are checked
+- claim cannot be submitted until work is finished and invoices or charges exist
+- maintenance remains active through the durability period
+
+Lifecycle gates should become visible JobDone tasks and warnings.
+
 ## First useful queries
 
 ### 1. What might fund this intervention?
@@ -166,6 +182,22 @@ Output:
 - evidence index
 - missing items
 - claim-ready status
+
+### 4. What phase is this job in?
+
+Input:
+
+- grant job lifecycle state
+- submitted evidence
+- agreement dates
+- completed tasks
+
+Output:
+
+- current gate
+- blocked/unblocked status
+- next submission tasks
+- warning if work is being planned too early
 
 ## Source handling
 
@@ -229,3 +261,7 @@ python3 scripts/generate_work_package.py \
 
 The output is a draft. It should be treated as a planning and evidence prompt,
 not as confirmation that a grant application will succeed.
+
+Related lifecycle model:
+
+- [`docs/grant-lifecycle.md`](grant-lifecycle.md)

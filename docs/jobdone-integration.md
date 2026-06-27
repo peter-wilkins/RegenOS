@@ -21,6 +21,8 @@ In RegenOS/JobDone terms, those become structured tasks and evidence fields.
 ## Proposed flow
 
 ```text
+Water Walk / field observation
+        ↓
 Funding rule / adviser plan
         ↓
 Intervention template
@@ -34,6 +36,10 @@ Field completion + evidence capture
 Evidence pack
         ↓
 Claim / report / inspection file
+        ↓
+Payment and variance review
+        ↓
+Maintenance / durability trail
 ```
 
 ## Task fields
@@ -53,6 +59,9 @@ A RegenOS-generated JobDone task probably needs:
 - evidence requirements
 - completion criteria
 - inspection/approval status
+- lifecycle phase
+- gate status
+- source grant requirement
 
 ## Evidence fields
 
@@ -73,6 +82,42 @@ Possible evidence types:
 - maintenance record
 - sensor reading
 - drone image
+
+## Grant lifecycle tasks
+
+Grant work packages should include submission and gate tasks, not only fieldwork
+tasks.
+
+Suggested phases:
+
+- `explore`
+- `pre_application`
+- `application`
+- `agreement`
+- `delivery`
+- `claim`
+- `payment_review`
+- `maintenance`
+
+Important generated tasks:
+
+- check land parcels and maps in Rural Payments
+- confirm management control
+- check existing agreements and double-funding risk
+- collect required adviser support
+- collect consents or permissions
+- prepare before-work photos
+- prepare map/sketch
+- submit application
+- record agreement offer and start date
+- do not start work until work is allowed
+- collect during/after photos
+- keep invoices, receipts, and timesheets
+- assemble claim pack
+- submit claim
+- record actual grant payment and costs
+- explain estimate-vs-actual variance
+- schedule maintenance/durability checks
 
 ## Field prompts
 

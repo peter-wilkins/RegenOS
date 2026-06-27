@@ -43,6 +43,7 @@ That makes this a natural integration point for **JobDone**: JobDone can become 
 - [`docs/jobdone-water-walk-page.md`](docs/jobdone-water-walk-page.md) — first JobDone page for water-walk pins and evidence capture.
 - [`docs/grant-model.md`](docs/grant-model.md) — country-independent grant/funding model.
 - [`docs/grants-knowledge-graph.md`](docs/grants-knowledge-graph.md) — first linked-record model for grant options, eligibility, evidence, and JobDone tasks.
+- [`docs/grant-lifecycle.md`](docs/grant-lifecycle.md) — grant phases, submission tasks, gates, claims, and maintenance.
 - [`docs/water-walk-grant-field-guide.md`](docs/water-walk-grant-field-guide.md) — what to look for in the field when matching locations to grant jobs.
 - [`docs/grant-job-budget-tool.md`](docs/grant-job-budget-tool.md) — first budget model for estimating whether a grant job is economically worth doing.
 - [`docs/intervention-templates.md`](docs/intervention-templates.md) — reusable templates for real-world work.

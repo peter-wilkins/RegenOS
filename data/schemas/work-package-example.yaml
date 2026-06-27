@@ -6,6 +6,10 @@ work_package:
   project_id: example-wet-corner-project
   title: Wet corner restoration demo
   status: draft
+  lifecycle_gate:
+    state: exploring
+    work_allowed: false
+    warning: Do not start work or buy materials until an agreement is accepted and the agreement start date has arrived.
 
 interventions:
   - id: pond-1
@@ -31,11 +35,32 @@ interventions:
       - dimensions
 
 jobs:
+  - id: task-000
+    intervention_id: check-dam-1
+    title: Check grant application readiness
+    description: Confirm land parcels, maps, management control, existing agreements, adviser support, and consent questions before applying.
+    phase: pre_application
+    gate: application_ready
+    assignee: null
+    location: null
+    evidence_required:
+      - type: checklist
+        fields:
+          - rural_payments_land_registered
+          - maps_checked
+          - management_control_confirmed
+          - existing_agreements_checked
+          - adviser_support_checked
+          - consents_checked
+    completion_criteria:
+      - Application readiness questions answered.
+      - Missing evidence recorded as tasks.
+
   - id: task-001
     intervention_id: pond-1
     title: Take pond before photos
     description: Take clear photos of the proposed pond site before work begins.
-    phase: before_work
+    phase: pre_application
     assignee: null
     location: null
     evidence_required:
@@ -63,6 +88,7 @@ jobs:
     title: Install check dam
     description: Install small check dam only after permissions and downstream risks have been checked.
     phase: delivery
+    gate: work_allowed
     assignee: null
     location: null
     evidence_required:
@@ -77,6 +103,39 @@ jobs:
       - Structure photographed.
       - Measurements recorded.
       - Overflow route noted.
+
+  - id: task-004
+    intervention_id: check-dam-1
+    title: Assemble claim pack
+    description: Prepare after-work photos, invoices, permissions, measurements, and any required maps for claim submission.
+    phase: claim
+    gate: claim_ready
+    assignee: null
+    location: null
+    evidence_required:
+      - type: after_photo
+      - type: invoice_or_timesheet
+      - type: permission_document
+      - type: measurement
+    completion_criteria:
+      - Work is complete.
+      - Claim evidence is present or missing items are listed.
+
+  - id: task-005
+    intervention_id: check-dam-1
+    title: Review estimate against actuals
+    description: Record actual grant income, costs, what went better, what went worse, and lessons for next time.
+    phase: payment_review
+    gate: reviewed
+    assignee: null
+    location: null
+    evidence_required:
+      - type: budget_actuals
+      - type: variance_review
+    completion_criteria:
+      - Actual costs recorded.
+      - Variance explanation recorded.
+      - Lesson for next time recorded.
 
 export:
   target: JobDone
