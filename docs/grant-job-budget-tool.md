@@ -12,6 +12,11 @@ For each candidate grant job:
 > If we did this here, would the grant roughly cover the work, and what are the
 > biggest unknowns?
 
+After the job:
+
+> What actually happened, why did it differ from the estimate, and what should
+> future estimates learn?
+
 ## Core records
 
 ### Grant job budget
@@ -28,10 +33,16 @@ Fields:
 - `cash_cost_estimate`
 - `internal_cost_estimate`
 - `margin_estimate`
+- `actual_grant_income`
+- `actual_cash_cost`
+- `actual_internal_cost`
+- `actual_margin`
+- `variance`
 - `confidence`
 - `assumptions`
 - `unknowns`
 - `landowner_judgement`
+- `outcome_review`
 
 ### Resource inventory
 
@@ -98,6 +109,14 @@ The tool should make uncertainty visible:
 
 ## Learning loop
 
+The budget is not a single form. It changes over the life cycle of the job:
+
+1. **First estimate**: rough field-walk guess.
+2. **Planned estimate**: after quotes, adviser input, and access checks.
+3. **In-progress update**: if scope changes.
+4. **Actuals**: after completion and claim/payment.
+5. **Review**: explain the variance and capture lessons.
+
 After a job is completed, actual costs should update future estimates:
 
 - actual hours
@@ -105,8 +124,26 @@ After a job is completed, actual costs should update future estimates:
 - actual bought materials
 - actual grant claim
 - delays or hidden costs
+- what went better than expected
+- what went worse than expected
+- why the estimate was wrong
+- what assumption should change next time
 
 This turns early guesswork into local cost knowledge.
+
+### Variance review
+
+Each completed budget should answer:
+
+- Was the grant income higher, lower, or as expected?
+- Were cash costs higher, lower, or as expected?
+- Were internal labour/machinery costs higher, lower, or as expected?
+- What went better than planned?
+- What went worse than planned?
+- What should we estimate differently next time?
+
+The explanation matters more than the arithmetic. Two jobs can have the same
+margin but teach different lessons.
 
 ## JobDone role
 
@@ -155,6 +192,18 @@ For a Water Walk candidate pin:
    - worth exploring
    - needs quote/adviser
    - not worth it
+
+After completion:
+
+1. Enter actual grant received.
+2. Enter actual cash cost.
+3. Enter actual internal labour/machinery cost.
+4. Show estimate vs actual variance.
+5. Capture:
+   - what went better
+   - what went worse
+   - why the estimate changed
+   - lesson for next time
 
 ## What not to build first
 

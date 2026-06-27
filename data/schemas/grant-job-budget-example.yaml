@@ -26,7 +26,25 @@ grant_job_budget:
     amount: 201.39
     currency: GBP
     confidence: low
+  actual_grant_income:
+    amount: null
+    currency: GBP
+  actual_cash_cost:
+    amount: null
+    currency: GBP
+  actual_internal_cost:
+    amount: null
+    currency: GBP
+  actual_margin:
+    amount: null
+    currency: GBP
+  variance:
+    grant_income_delta: null
+    cash_cost_delta: null
+    internal_cost_delta: null
+    margin_delta: null
   landowner_judgement: needs_field_check
+  lifecycle_stage: first_estimate
 
 resource_inventory:
   machinery:
@@ -76,3 +94,10 @@ unknowns:
   - Is consent needed?
   - Is local woody material suitable?
   - Can machinery reach the site without damage?
+
+outcome_review:
+  completed_at: null
+  went_better_than_planned: []
+  went_worse_than_planned: []
+  variance_explanation: ""
+  lesson_for_next_time: ""
