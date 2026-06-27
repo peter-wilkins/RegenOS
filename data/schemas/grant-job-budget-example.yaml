@@ -1,0 +1,78 @@
+# Draft grant job budget shape.
+# Values are illustrative only.
+
+grant_job_budget:
+  id: dewlish-check-dam-001-budget
+  project_id: dewlish-water-walk
+  site_id: dewlish
+  intervention_id: check-dam-001
+  funding_option_id: uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+  quantity:
+    amount: 1
+    unit: dam
+  grant_income_estimate:
+    amount: 461.39
+    currency: GBP
+    confidence: medium
+  cash_cost_estimate:
+    amount: 80
+    currency: GBP
+    confidence: low
+  internal_cost_estimate:
+    amount: 180
+    currency: GBP
+    confidence: low
+  margin_estimate:
+    amount: 201.39
+    currency: GBP
+    confidence: low
+  landowner_judgement: needs_field_check
+
+resource_inventory:
+  machinery:
+    - name: tractor_and_trailer
+      owned_by_farm: unknown
+    - name: small_digger
+      owned_by_farm: unknown
+  people:
+    - role: farm_worker
+      available: unknown
+    - role: chainsaw_certified_person
+      available: unknown
+  materials:
+    - name: woody_material
+      source: nearby_woodland_or_tree_work
+      available: unknown
+
+cost_lines:
+  - kind: labour
+    description: Install small woody dam with farm labour
+    quantity: 4
+    unit: hours
+    unit_cost: 25
+    cash_or_internal: internal
+    confidence: low
+    source: first_guess
+  - kind: machinery
+    description: Tractor/trailer movement of woody material
+    quantity: 2
+    unit: hours
+    unit_cost: 40
+    cash_or_internal: internal
+    confidence: low
+    source: first_guess
+  - kind: material
+    description: Woody material from nearby management work
+    quantity: 1
+    unit: dam
+    unit_cost: 0
+    cash_or_internal: cash
+    confidence: low
+    source: assumes_local_material
+
+unknowns:
+  - Is the channel width inside the grant range?
+  - Is Catchment Sensitive Farming support available?
+  - Is consent needed?
+  - Is local woody material suitable?
+  - Can machinery reach the site without damage?
