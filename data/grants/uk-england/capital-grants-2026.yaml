@@ -1,0 +1,188 @@
+id: uk-england.capital-grants-2026
+name: Capital Grants 2026
+jurisdiction: uk-england
+funder:
+  - Rural Payments Agency
+  - Natural England
+status: draft
+last_checked: "2026-06-27"
+source_urls:
+  - https://www.gov.uk/government/publications/capital-grants-2026
+  - https://www.gov.uk/government/publications/capital-grants-2026/applicants-guide-capital-grants-2026
+notes:
+  - Applications open in July 2026 and funding is not guaranteed.
+  - Land parcels must be in England and management control matters.
+  - This file is a hand-curated MVP seed, not legal or grant advice.
+
+options:
+  - id: uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+    name: "RP32: Small leaky woody dams"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/rp32-small-leaky-woody-dams
+    intervention_templates:
+      - check-dam
+    payment:
+      type: per_item
+      amount: 461.39
+      currency: GBP
+      unit: dam
+    eligibility_rules:
+      - id: needs-csf-support
+        kind: human_confirmation
+        description: Must be used with support from Catchment Sensitive Farming.
+      - id: channel-size
+        kind: site_fact
+        fact: watercourse.width_m
+        operator: between
+        value:
+          min: 1
+          max: 2.99
+        alternative:
+          fact: runoff_pathway.total_dam_length_m
+          operator: less_than
+          value: 10
+        description: Suitable for streams from 1m to 2.99m wide, or short ephemeral runoff pathways.
+      - id: target-catchment
+        kind: human_or_gis_confirmation
+        description: Catchment must support groundwater recharge or be targeted for flood risk or water resource benefits.
+      - id: consent-check
+        kind: human_confirmation
+        description: Environment Agency, lead local flood authority, or internal drainage board consent may be needed.
+    evidence_requirements:
+      - id: csf-written-support
+        phase: application
+        evidence_type: adviser_support
+        description: Written support from Catchment Sensitive Farming adviser.
+      - id: before-photos
+        phase: before_work
+        evidence_type: photo
+        description: Photos of the existing site before work starts.
+      - id: completed-photos
+        phase: claim
+        evidence_type: photo
+        description: Photos of completed works in place and installed.
+      - id: consents
+        phase: claim
+        evidence_type: permission_document
+        description: Any relevant consents and permissions.
+      - id: invoices
+        phase: claim
+        evidence_type: invoice_or_bank_statement
+        description: Receipted invoices or bank statements where needed.
+      - id: plan-if-applicable
+        phase: application
+        evidence_type: plan_or_feasibility_study
+        description: Feasibility study, woodland management plan, or water holding structure action plan where applicable.
+    compatibility:
+      can_be_used_with:
+        - RP11 Swales
+
+  - id: uk-england.capital-grants-2026/rp33-large-leaky-woody-dams
+    name: "RP33: Large leaky woody dams"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/rp33-large-leaky-woody-dams
+    intervention_templates:
+      - check-dam
+    payment:
+      type: per_item
+      amount: 764.42
+      currency: GBP
+      unit: dam
+    eligibility_rules:
+      - id: needs-csf-support
+        kind: human_confirmation
+        description: Must be used with support from Catchment Sensitive Farming.
+      - id: channel-size
+        kind: site_fact
+        fact: watercourse.width_m
+        operator: between
+        value:
+          min: 3
+          max: 5
+        alternative:
+          fact: runoff_pathway.total_dam_length_m
+          operator: less_than
+          value: 15
+        description: Suitable for streams or river channels from 3m to 5m wide, or longer ephemeral runoff pathways.
+      - id: target-catchment
+        kind: human_or_gis_confirmation
+        description: Catchment must support groundwater recharge or be targeted for flood risk or water resource benefits.
+      - id: consent-check
+        kind: human_confirmation
+        description: Environment Agency, lead local flood authority, or internal drainage board consent may be needed.
+    evidence_requirements:
+      - id: csf-written-support
+        phase: application
+        evidence_type: adviser_support
+        description: Written support from Catchment Sensitive Farming adviser.
+      - id: before-photos
+        phase: before_work
+        evidence_type: photo
+        description: Photos of the existing site before work starts.
+      - id: completed-photos
+        phase: claim
+        evidence_type: photo
+        description: Photos of completed works in place and installed.
+      - id: consents
+        phase: claim
+        evidence_type: permission_document
+        description: Any relevant consents and permissions.
+      - id: invoices
+        phase: claim
+        evidence_type: invoice_or_bank_statement
+        description: Receipted invoices or bank statements where needed.
+      - id: plan-if-applicable
+        phase: application
+        evidence_type: plan_or_feasibility_study
+        description: Feasibility study, woodland management plan, or water holding structure action plan where applicable.
+    compatibility:
+      can_be_used_with:
+        - RP11 Swales
+
+  - id: uk-england.capital-grants-2026/wn12-create-or-restore-ponds-up-to-2ha
+    name: "WN12: Create or restore ponds up to 2 hectares"
+    status: draft
+    confidence: low
+    source_urls:
+      - https://www.gov.uk/capital-grant-finder/wn12-create-or-restore-ponds-up-to-2-hectares
+    intervention_templates:
+      - pond
+    payment:
+      type: unknown
+      amount: null
+      currency: GBP
+      unit: pond
+    eligibility_rules:
+      - id: pond-size
+        kind: site_fact
+        fact: pond.area_ha
+        operator: less_than_or_equal
+        value: 2
+        description: Create or restore ponds up to 2 hectares.
+      - id: buffer-strip-if-needed
+        kind: human_or_gis_confirmation
+        description: Pond buffer strip may be needed next to cultivated land or intensive grassland.
+      - id: restore-assessment
+        kind: human_confirmation
+        description: Pond restoration may need pre-application assessment for wildlife and historic interest.
+    evidence_requirements:
+      - id: before-photos
+        phase: before_work
+        evidence_type: photo
+        description: Photos of the existing site before work starts.
+      - id: completed-photos
+        phase: claim
+        evidence_type: photo
+        description: Photos of completed works.
+      - id: dimensions
+        phase: claim
+        evidence_type: measurement
+        description: Pond size and relevant dimensions.
+      - id: map-or-sketch
+        phase: application
+        evidence_type: map_or_sketch
+        description: Map or sketch showing pond location and shape.

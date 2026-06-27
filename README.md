@@ -42,6 +42,7 @@ That makes this a natural integration point for **JobDone**: JobDone can become 
 - [`docs/jobdone-integration.md`](docs/jobdone-integration.md) — how grant evidence becomes field tasks.
 - [`docs/jobdone-water-walk-page.md`](docs/jobdone-water-walk-page.md) — first JobDone page for water-walk pins and evidence capture.
 - [`docs/grant-model.md`](docs/grant-model.md) — country-independent grant/funding model.
+- [`docs/grants-knowledge-graph.md`](docs/grants-knowledge-graph.md) — first linked-record model for grant options, eligibility, evidence, and JobDone tasks.
 - [`docs/intervention-templates.md`](docs/intervention-templates.md) — reusable templates for real-world work.
 - [`docs/pylusat-and-suitability.md`](docs/pylusat-and-suitability.md) — notes on land suitability analysis.
 - [`docs/architecture-discussion.md`](docs/architecture-discussion.md) — provisional architecture questions, not a final design.

@@ -42,3 +42,15 @@ options:
 ```
 
 Keep early files approximate, but mark their status clearly.
+
+## First query
+
+The first local query is intervention-first:
+
+```bash
+python3 scripts/query_grants.py check-dam --facts '{"watercourse":{"width_m":1.8}}'
+```
+
+This should return candidate funding options, rule states, and evidence prompts.
+It is deliberately small: prove the linked records are useful before adding a
+database or scraper.
