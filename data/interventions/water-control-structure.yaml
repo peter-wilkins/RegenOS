@@ -1,0 +1,42 @@
+id: water-control-structure
+name: Water control structure
+type: water_management
+description: Install a sluice, penning structure, block, or similar feature to hold, raise, or control water levels.
+
+suitable_when:
+  - a clear water-level management objective exists
+  - structure has an agreed safe overflow or operating regime
+  - an adviser or specialist has checked the design
+  - ongoing inspection and maintenance are realistic
+
+avoid_when:
+  - failure could flood homes, roads, neighbours, or protected features
+  - watercourse, flood-risk, or drainage consent is missing
+  - nobody is responsible for operation and maintenance
+  - a lower-risk earthwork or vegetation change would achieve the same result
+
+typical_tasks:
+  - define target water level
+  - check downstream risk
+  - get adviser or specialist design
+  - check permissions and consents
+  - take before photos
+  - install structure
+  - record dimensions and location
+  - take after photos
+  - create inspection schedule
+
+required_evidence:
+  - design_or_specification
+  - consent_or_permission_record
+  - before_photo
+  - gps_location
+  - invoice_or_labour_record
+  - after_photo
+  - maintenance_plan
+
+maintenance:
+  - inspect before and after high-flow periods
+  - check for blockage, erosion, or damage
+  - record any operation or adjustment
+  - repair promptly if water is escaping around the structure

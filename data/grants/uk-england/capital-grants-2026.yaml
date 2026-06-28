@@ -5,7 +5,7 @@ funder:
   - Rural Payments Agency
   - Natural England
 status: draft
-last_checked: "2026-06-27"
+last_checked: "2026-06-28"
 source_urls:
   - https://www.gov.uk/government/publications/capital-grants-2026
   - https://www.gov.uk/government/publications/capital-grants-2026/applicants-guide-capital-grants-2026
@@ -146,14 +146,14 @@ options:
   - id: uk-england.capital-grants-2026/wn12-create-or-restore-ponds-up-to-2ha
     name: "WN12: Create or restore ponds up to 2 hectares"
     status: draft
-    confidence: low
+    confidence: medium
     source_urls:
       - https://www.gov.uk/capital-grant-finder/wn12-create-or-restore-ponds-up-to-2-hectares
     intervention_templates:
       - pond
     payment:
-      type: unknown
-      amount: null
+      type: per_item
+      amount: 1879.46
       currency: GBP
       unit: pond
     eligibility_rules:
@@ -186,3 +186,720 @@ options:
         phase: application
         evidence_type: map_or_sketch
         description: Map or sketch showing pond location and shape.
+      - id: consents
+        phase: claim
+        evidence_type: permission_document
+        description: Any Environment Agency, local council, internal drainage board, Natural England, historic environment, or other relevant consents.
+      - id: invoices
+        phase: claim
+        evidence_type: invoice_or_bank_statement
+        description: Contracts, invoices, or other documents confirming technical specification and completed work costs.
+
+  - id: uk-england.capital-grants-2026/rp3-watercourse-crossings
+    name: "RP3: Watercourse crossings"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/watercourse-crossings-rp3
+    intervention_templates:
+      - water-infrastructure
+    payment: { type: per_item, amount: 506.44, currency: GBP, unit: crossing }
+    eligibility_rules:
+      - id: watercourse-crossing-needed
+        kind: human_or_gis_confirmation
+        description: Use where livestock or machinery need to cross a watercourse without damaging banks or bed.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check watercourse, flood authority, internal drainage board, and local permissions before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of the crossing site before work starts. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of the completed crossing. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/rp5-cross-drains
+    name: "RP5: Cross drains"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/cross-drains-rp5
+    intervention_templates:
+      - runoff-control
+      - water-infrastructure
+    payment: { type: per_item, amount: 750.26, currency: GBP, unit: drain }
+    eligibility_rules:
+      - id: runoff-from-track-or-yard
+        kind: human_or_gis_confirmation
+        description: Use where a cross drain would intercept and divert surface water from a track, gateway, or hard surface.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check drainage, pollution, and outfall permissions before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos showing runoff path before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of installed cross drain and outfall. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/rp6-piped-culverts-in-ditches
+    name: "RP6: Installation of piped culverts in ditches"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/installation-of-piped-culverts-in-ditches-rp6
+    intervention_templates:
+      - water-infrastructure
+    payment: { type: per_item, amount: 376.23, currency: GBP, unit: culvert }
+    eligibility_rules:
+      - id: ditch-crossing-needed
+        kind: human_or_gis_confirmation
+        description: Use where a ditch crossing is needed and a piped culvert is appropriate.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check drainage authority, flood-risk, and habitat permissions before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of ditch crossing location before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of installed culvert. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/rp7-sediment-ponds-and-traps
+    name: "RP7: Sediment ponds and traps"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/sediment-ponds-and-traps-rp7
+    intervention_templates:
+      - runoff-control
+      - pond
+    payment: { type: per_area, amount: 11.88, currency: GBP, unit: square_metre }
+    eligibility_rules:
+      - id: sediment-runoff-risk
+        kind: human_or_gis_confirmation
+        description: Use where runoff is carrying sediment or nutrients toward a watercourse or sensitive feature.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check watercourse, pollution, and outfall permissions before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of runoff and sediment source before work. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Area and dimensions of sediment pond or trap. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed sediment pond or trap. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/rp8-constructed-wetlands-for-pollution
+    name: "RP8: Constructed wetlands for the treatment of pollution"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/constructed-wetlands-for-the-treatment-of-pollution-rp8
+    intervention_templates:
+      - wetland-restoration
+      - runoff-control
+    payment: { type: percent_actual_cost, amount: 50, currency: GBP, unit: actual_cost_percent }
+    eligibility_rules:
+      - id: needs-plan-or-study
+        kind: human_confirmation
+        description: Must be alongside a feasibility study or Catchment Sensitive Farming water holding structure action plan.
+      - id: pollution-treatment-purpose
+        kind: human_or_gis_confirmation
+        description: Use to treat field or farmyard diffuse runoff, not slurry, silage liquor, heavily contaminated water, or concentrated pesticide spills.
+      - id: quotes-required
+        kind: human_confirmation
+        description: Three written quotations are required with the application.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check Environment Agency, local flood authority, internal drainage board, and planning authority requirements before work.
+    evidence_requirements:
+      - { id: plan-or-study, phase: application, evidence_type: plan_or_feasibility_study, description: Feasibility study or CSF water holding structure action plan. }
+      - { id: quotes, phase: application, evidence_type: quote, description: Three written quotations and selected quote agreement. }
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of site before work starts. }
+      - { id: during-photos, phase: claim, evidence_type: photo, description: Photos during construction stages or technical completion documents. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed wetland. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents or evidence that consent is not needed. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements. }
+
+  - id: uk-england.capital-grants-2026/rp9-earth-banks-and-soil-bunds
+    name: "RP9: Earth banks and soil bunds"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/earth-banks-and-soil-bunds-rp9
+    intervention_templates:
+      - runoff-control
+    payment: { type: per_length_unit, amount: 195.61, currency: GBP, unit: 100_metres }
+    eligibility_rules:
+      - id: runoff-interception-purpose
+        kind: human_or_gis_confirmation
+        description: Use where an earth bank or soil bund would slow, divert, or settle runoff without creating harm downstream.
+      - id: overflow-and-consent-check
+        kind: human_confirmation
+        description: Check overflow route, flood risk, archaeology, drainage, and consent constraints.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos showing location and runoff path before work. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Length and dimensions of bank or bund. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed bank or bund. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/rp10-silt-filtration-dams-or-seepage-barriers
+    name: "RP10: Silt filtration dams or seepage barriers"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/silt-filtration-dams-or-seepage-barriers-rp10
+    intervention_templates:
+      - check-dam
+      - runoff-control
+    payment: { type: per_item, amount: 198.14, currency: GBP, unit: unit }
+    eligibility_rules:
+      - id: sediment-filtration-purpose
+        kind: human_or_gis_confirmation
+        description: Use where a small filtration dam or seepage barrier can trap silt and slow runoff safely.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check watercourse, drainage, flood-risk, and habitat permissions before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of runoff route before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed filtration dam or barrier. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Number and dimensions of installed units. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/rp11-swales
+    name: "RP11: Swales"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/swales-rp11
+    intervention_templates:
+      - runoff-control
+    payment: { type: per_area, amount: 7.52, currency: GBP, unit: square_metre }
+    eligibility_rules:
+      - id: runoff-flow-path
+        kind: human_or_gis_confirmation
+        description: Use where a shallow vegetated swale can intercept or carry runoff safely.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check outfall, drainage, flood-risk, archaeology, and habitat permissions before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of proposed swale line before work. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: "Area, length, and relevant swale dimensions." }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed swale. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/rp12-check-dams
+    name: "RP12: Check dams"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/check-dams-rp12
+    intervention_templates:
+      - check-dam
+      - runoff-control
+    payment: { type: per_item, amount: 85.29, currency: GBP, unit: dam }
+    eligibility_rules:
+      - id: small-channel-or-flow-path
+        kind: human_or_gis_confirmation
+        description: Use where a small check dam can slow runoff and trap sediment without causing flood or erosion harm.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check watercourse, drainage, flood-risk, archaeology, and habitat permissions before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos upstream and downstream before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed check dam. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: "Dam count, dimensions, and location." }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/wn1-grip-blocking-drainage-channels
+    name: "WN1: Grip blocking drainage channels"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/grip-blocking-drainage-channels-wn1
+    intervention_templates:
+      - wetland-restoration
+      - water-control-structure
+    payment: { type: per_item, amount: 19.06, currency: GBP, unit: block }
+    eligibility_rules:
+      - id: drainage-channel-blocking-purpose
+        kind: human_or_gis_confirmation
+        description: Use where blocking grips or drainage channels supports wetland, peat, moorland, or habitat restoration aims.
+      - id: adviser-and-consent-check
+        kind: human_confirmation
+        description: Check Natural England/adviser fit, hydrology, downstream impact, and consents before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of drainage channels before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed grip blocks. }
+      - { id: locations, phase: claim, evidence_type: gps_location, description: GPS locations or mapped line of blocked channels. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/wn2-creation-of-scrapes-and-gutters
+    name: "WN2: Creation of scrapes and gutters"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/creation-of-scrapes-and-gutters-wn2
+    intervention_templates:
+      - wetland-restoration
+    payment: { type: per_area, amount: 5.64, currency: GBP, unit: square_metre }
+    eligibility_rules:
+      - id: wetland-habitat-purpose
+        kind: human_or_gis_confirmation
+        description: Use where shallow scrapes or gutters would support wetland birds, wet grassland, or other wet habitat objectives.
+      - id: adviser-and-consent-check
+        kind: human_confirmation
+        description: Check Natural England/adviser approval, archaeology, protected habitats, and drainage consents before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of scrape or gutter location before work. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Area and dimensions created. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed scrapes or gutters. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+
+  - id: uk-england.capital-grants-2026/wn3-ditch-dyke-and-rhine-restoration
+    name: "WN3: Ditch, dyke and rhine restoration"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/ditch-dyke-and-rhine-restoration-wn3
+    intervention_templates:
+      - wetland-restoration
+      - water-infrastructure
+    payment: { type: per_length, amount: 5.72, currency: GBP, unit: metre }
+    eligibility_rules:
+      - id: ditch-restoration-purpose
+        kind: human_or_gis_confirmation
+        description: Use where restoring an existing ditch, dyke, or rhine supports habitat or water management objectives.
+      - id: adviser-and-consent-check
+        kind: human_confirmation
+        description: Check Natural England/adviser fit, drainage rights, protected habitat, and consents before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: "Photos of ditch, dyke, or rhine before restoration." }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Restored length and dimensions. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos after restoration. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+
+  - id: uk-england.capital-grants-2026/wn4-ditch-dyke-and-rhine-creation
+    name: "WN4: Ditch, dyke and rhine creation"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/ditch-dyke-and-rhine-creation-wn4
+    intervention_templates:
+      - wetland-restoration
+      - water-infrastructure
+    payment: { type: per_length, amount: 13.63, currency: GBP, unit: metre }
+    eligibility_rules:
+      - id: new-ditch-purpose
+        kind: human_or_gis_confirmation
+        description: Use where creating a ditch, dyke, or rhine supports habitat or water management objectives.
+      - id: adviser-and-consent-check
+        kind: human_confirmation
+        description: Check Natural England/adviser fit, drainage rights, protected habitat, archaeology, and consents before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of proposed line before creation. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Created length and dimensions. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos after creation. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+
+  - id: uk-england.capital-grants-2026/wn7-restoration-of-large-water-bodies
+    name: "WN7: Restoration of large water bodies"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/restoration-of-large-water-bodies-wn7
+    intervention_templates:
+      - wetland-restoration
+      - pond
+    payment: { type: percent_actual_cost, amount: 100, currency: GBP, unit: actual_cost_percent }
+    eligibility_rules:
+      - id: waterbody-size
+        kind: site_fact
+        fact: waterbody.area_ha
+        operator: greater_than_or_equal
+        value: 2
+        description: Intended for degraded water bodies of 2 hectares or more.
+      - id: natural-england-approval
+        kind: human_confirmation
+        description: Requires Natural England approval and detailed agreed specification.
+      - id: quotes-required
+        kind: human_confirmation
+        description: At least three written quotations are required with the application.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check Environment Agency, lead local flood authority, or internal drainage board consent before work.
+    evidence_requirements:
+      - { id: agreed-specification, phase: application, evidence_type: technical_specification, description: Detailed specification agreed with Natural England. }
+      - { id: quotes, phase: application, evidence_type: quote, description: At least three written quotations and selected quote agreement. }
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of site before works start. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed work. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements. }
+
+  - id: uk-england.capital-grants-2026/wn8-timber-sluice
+    name: "WN8: Timber sluice"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/timber-sluice-wn8
+    intervention_templates:
+      - water-control-structure
+    payment: { type: per_item, amount: 451.50, currency: GBP, unit: sluice }
+    eligibility_rules:
+      - id: water-level-control-purpose
+        kind: human_or_gis_confirmation
+        description: Use where a timber sluice is appropriate for controlling water levels in a habitat or water-management feature.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check Environment Agency, flood authority, internal drainage board, and planning constraints before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of sluice location before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of installed timber sluice. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Sluice dimensions and location. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+
+  - id: uk-england.capital-grants-2026/wn9-brick-stone-or-concrete-sluice
+    name: "WN9: Brick, stone or concrete sluice"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/brick-stone-or-concrete-sluice-wn9
+    intervention_templates:
+      - water-control-structure
+    payment: { type: per_item, amount: 2901.40, currency: GBP, unit: sluice }
+    eligibility_rules:
+      - id: durable-water-level-control-purpose
+        kind: human_or_gis_confirmation
+        description: Use where a durable sluice is appropriate for controlling water levels in a habitat or water-management feature.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check Environment Agency, flood authority, internal drainage board, planning, heritage, and habitat constraints before work.
+    evidence_requirements:
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of sluice location before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of installed sluice. }
+      - { id: dimensions, phase: claim, evidence_type: measurement, description: Sluice dimensions and location. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/wn10-construction-of-water-penning-structures
+    name: "WN10: Construction of water penning structures"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/construction-of-water-penning-structures-wn10
+    intervention_templates:
+      - water-control-structure
+      - wetland-restoration
+    payment: { type: percent_actual_cost, amount: 100, currency: GBP, unit: actual_cost_percent }
+    eligibility_rules:
+      - id: natural-england-approval
+        kind: human_confirmation
+        description: Requires Natural England agreement and detailed specification.
+      - id: bespoke-need
+        kind: human_confirmation
+        description: Use only where standard soil bunds or sluices are not possible to raise water levels.
+      - id: quotes-required
+        kind: human_confirmation
+        description: At least three written quotations are required with the application.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check Environment Agency, flood authority, internal drainage board, and planning authority requirements before work.
+    evidence_requirements:
+      - { id: agreed-specification, phase: application, evidence_type: technical_specification, description: Detailed specification agreed with Natural England. }
+      - { id: quotes, phase: application, evidence_type: quote, description: At least three written quotations and selected quote agreement. }
+      - { id: during-photos, phase: claim, evidence_type: photo, description: Photos during construction stages or technical completion documents. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents or evidence that consent is not needed. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements. }
+
+  - id: uk-england.capital-grants-2026/wn11-temporary-water-storage-features
+    name: "WN11: Install temporary water storage features"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/capital-grant-finder/wn11-install-temporary-water-storage-features
+    intervention_templates:
+      - runoff-control
+      - wetland-restoration
+    payment: { type: per_area, amount: 7.36, currency: GBP, unit: square_metre }
+    eligibility_rules:
+      - id: lower-land-or-converging-flow
+        kind: human_or_gis_confirmation
+        description: Create temporary storage where land is naturally lower than surroundings or several flow paths combine.
+      - id: paired-management-action
+        kind: human_confirmation
+        description: Must be alongside a relevant woodland, arable, grassland, or floodplain management action.
+      - id: specification-required
+        kind: human_confirmation
+        description: Detailed specification must be agreed with Natural England or Forestry Commission in woodland.
+      - id: consent-check
+        kind: human_confirmation
+        description: Check flood risk management authority, Environment Agency, or highways authority consents before work.
+    evidence_requirements:
+      - { id: agreed-specification, phase: application, evidence_type: technical_specification, description: Specification agreed with Natural England or Forestry Commission. }
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of site before works start. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed water storage feature. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Relevant permits or consents connected with the work. }
+
+  - id: uk-england.capital-grants-2026/wn13-manage-wetland-cutting-supplement
+    name: "WN13: Manage wetland cutting supplement"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/capital-grant-finder/wn13-manage-wetland-cutting-supplement
+    intervention_templates:
+      - wetland-restoration
+    payment: { type: per_area, amount: 1346.00, currency: GBP, unit: hectare }
+    eligibility_rules:
+      - id: supplement-not-standalone
+        kind: human_confirmation
+        description: Treat as a supplement to an eligible wetland management action, not a standalone capital job.
+      - id: annual-cutting-area
+        kind: site_fact
+        fact: wetland.cutting_area_ha
+        operator: greater_than
+        value: 0
+        description: Payment applies to hectares cut in the claim year.
+    evidence_requirements:
+      - { id: area-record, phase: claim, evidence_type: measurement, description: Area cut in the claim year. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos showing completed wetland cutting where required. }
+      - { id: invoices-or-labour, phase: claim, evidence_type: invoice_or_labour_record, description: Contractor invoice or internal labour record where useful. }
+
+  - id: uk-england.capital-grants-2026/te1-planting-standard-hedgerow-tree
+    name: "TE1: Planting standard hedgerow tree"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/planting-standard-hedgerow-tree-te1
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 19.06, currency: GBP, unit: tree }
+    eligibility_rules:
+      - id: hedgerow-tree-location
+        kind: human_or_gis_confirmation
+        description: Plant as a standard tree in or beside an appropriate hedgerow.
+      - id: constraint-check
+        kind: human_confirmation
+        description: Check services, roads, archaeology, protected habitats, and long-term maintenance before planting.
+    evidence_requirements:
+      - { id: species-list, phase: application, evidence_type: species_list, description: Species and planting plan where required. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of planted trees. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/te2-planting-standard-parkland-tree
+    name: "TE2: Planting standard parkland tree"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/planting-standard-parkland-tree-te2
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 123.94, currency: GBP, unit: tree }
+    eligibility_rules:
+      - id: parkland-tree-location
+        kind: human_or_gis_confirmation
+        description: Plant a standard tree in an appropriate parkland or wood-pasture context.
+      - id: constraint-check
+        kind: human_confirmation
+        description: Check landscape, heritage, archaeology, protected habitat, services, and long-term maintenance before planting.
+    evidence_requirements:
+      - { id: planting-plan, phase: application, evidence_type: planting_plan, description: Planting location and species plan where required. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of planted trees. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/te3-planting-fruit-trees
+    name: "TE3: Planting fruit trees"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/planting-fruit-trees-te3
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 28.07, currency: GBP, unit: tree }
+    eligibility_rules:
+      - id: orchard-or-fruit-tree-context
+        kind: human_or_gis_confirmation
+        description: Plant fruit trees in an eligible orchard, traditional orchard, or agreed fruit-tree context.
+      - id: constraint-check
+        kind: human_confirmation
+        description: Check variety, spacing, protection, heritage, and long-term maintenance requirements before planting.
+    evidence_requirements:
+      - { id: species-variety-list, phase: application, evidence_type: species_list, description: Fruit tree species and variety record. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of planted fruit trees. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/te4-supply-and-plant-tree
+    name: "TE4: Supply and plant tree"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/supply-and-plant-tree-te4
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 1.72, currency: GBP, unit: tree }
+    eligibility_rules:
+      - id: woodland-or-restocking-purpose
+        kind: human_or_gis_confirmation
+        description: Use for eligible new woodland, tree health restocking, hedgerows, or approved shelter belts depending on application code.
+      - id: avoid-excluded-tree-planting
+        kind: human_confirmation
+        description: Check exclusions such as ash planting, Christmas trees, biomass, cricket bat willow, archaeology, ecology, and required approvals.
+      - id: water-quality-or-flood-risk-purpose
+        kind: human_or_gis_confirmation
+        description: Application code TE4B can support improving water quality or reducing flood risk.
+    evidence_requirements:
+      - { id: planting-plan, phase: application, evidence_type: planting_plan, description: "Planting plan, area, density, species, and application purpose code." }
+      - { id: species-list, phase: application, evidence_type: species_list, description: Tree species list and native/non-native status where relevant. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed planting. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any consents or permissions connected with the work. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/te15-plant-groups-of-trees-in-large-guards
+    name: "TE15: Plant groups of trees in large guards"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/capital-grant-finder/te15-plant-groups-of-trees-in-large-guards
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 572.78, currency: GBP, unit: large_guard }
+    eligibility_rules:
+      - id: natural-england-approval
+        kind: human_confirmation
+        description: Requires Natural England approval alongside eligible scrub, wood pasture, or open habitat mosaic actions.
+      - id: minimum-trees-per-guard
+        kind: site_fact
+        fact: tree_group.trees_per_large_guard
+        operator: greater_than_or_equal
+        value: 80
+        description: Large guard must contain at least 80 trees.
+      - id: not-agroforestry-or-orchard
+        kind: human_confirmation
+        description: Cannot be used for agroforestry systems or orchards.
+    evidence_requirements:
+      - { id: planting-plan, phase: application, evidence_type: planting_plan, description: "Guard layout, tree numbers, species mix, and eligible base action." }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of completed guards and planted trees. }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any consents or permissions connected with the work. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/af1-plant-agroforestry-woodland-tree
+    name: "AF1: Plant an agroforestry woodland tree"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/af1-plant-an-agroforestry-woodland-tree
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 5.40, currency: GBP, unit: tree }
+    eligibility_rules:
+      - id: agroforestry-context
+        kind: human_confirmation
+        description: Use within an eligible agroforestry action or agreement context.
+      - id: planting-design-check
+        kind: human_confirmation
+        description: Check spacing, species, protection, farm system fit, and long-term management before planting.
+    evidence_requirements:
+      - { id: agroforestry-plan, phase: application, evidence_type: planting_plan, description: "Agroforestry plan with tree locations, species, and spacing." }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of planted trees. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/af2-plant-agroforestry-fruit-tree
+    name: "AF2: Plant an agroforestry fruit tree"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/af2-plant-an-agroforestry-fruit-tree
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 17.83, currency: GBP, unit: tree }
+    eligibility_rules:
+      - id: agroforestry-context
+        kind: human_confirmation
+        description: Use within an eligible agroforestry action or agreement context.
+      - id: fruit-tree-design-check
+        kind: human_confirmation
+        description: Check fruit tree species, rootstocks, spacing, protection, farm system fit, and long-term management before planting.
+    evidence_requirements:
+      - { id: agroforestry-plan, phase: application, evidence_type: planting_plan, description: "Agroforestry plan with fruit tree locations, varieties, and spacing." }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos of planted fruit trees. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/af3-species-diversity-bonus-supplement
+    name: "AF3: Species diversity bonus supplement"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/countryside-stewardship-grants/af3-supplement-species-diversity-bonus
+    intervention_templates:
+      - tree-planting
+    payment: { type: per_item, amount: 1.16, currency: GBP, unit: tree }
+    eligibility_rules:
+      - id: supplement-not-standalone
+        kind: human_confirmation
+        description: Treat as a supplement to eligible agroforestry tree planting, not a standalone job.
+      - id: species-diversity-check
+        kind: human_confirmation
+        description: Confirm the planting design meets the scheme species diversity requirement.
+    evidence_requirements:
+      - { id: species-list, phase: application, evidence_type: species_list, description: Species mix demonstrating diversity requirement. }
+      - { id: planting-record, phase: claim, evidence_type: planting_record, description: Record of planted trees eligible for the supplement. }
+
+  - id: uk-england.capital-grants-2026/gr1-create-or-restore-grassland-habitat
+    name: "GR1: Create or restore grassland habitat"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/capital-grant-finder/gr1-create-or-restore-grassland-habitat
+    intervention_templates:
+      - grassland-habitat
+    payment: { type: per_area, amount: 186.02, currency: GBP, unit: hectare }
+    eligibility_rules:
+      - id: higher-tier-or-adviser-approval
+        kind: human_confirmation
+        description: Check Higher Tier/Natural England adviser approval and eligible grassland habitat objective.
+      - id: implementation-plan-check
+        kind: human_confirmation
+        description: Follow agreed implementation plan or feasibility study where applicable.
+    evidence_requirements:
+      - { id: adviser-approval, phase: application, evidence_type: adviser_support, description: Copy of Natural England adviser approval where required. }
+      - { id: before-photos, phase: before_work, evidence_type: photo, description: Photos of grassland before work. }
+      - { id: completed-photos, phase: claim, evidence_type: photo, description: Photos showing completed habitat creation or restoration. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/gr2-standard-seed-mix-for-grassland-habitat
+    name: "GR2: Standard seed mix for grassland habitat"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/capital-grant-finder/gr2-standard-seed-mix-for-grassland-habitat
+    intervention_templates:
+      - grassland-habitat
+    payment: { type: per_area, amount: 203.00, currency: GBP, unit: hectare }
+    eligibility_rules:
+      - id: gr1-required
+        kind: human_confirmation
+        description: Can only be used with GR1 create or restore grassland habitat and adviser approval.
+      - id: agreed-seed-mix
+        kind: human_confirmation
+        description: Seed mix must be agreed in writing with adviser and match target habitat, soil, and species needs.
+    evidence_requirements:
+      - { id: adviser-approval, phase: application, evidence_type: adviser_support, description: Copy of written adviser advice or approval. }
+      - { id: seed-mix-record, phase: claim, evidence_type: seed_mix_record, description: "Record of seed mix used, including native British origin where relevant." }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }
+
+  - id: uk-england.capital-grants-2026/gr3-floristically-enhanced-seed-mix-for-grassland-habitat
+    name: "GR3: Floristically enhanced seed mix for grassland habitat"
+    status: draft
+    confidence: medium
+    source_urls:
+      - https://www.gov.uk/capital-grant-finder/gr3-floristically-enhanced-seed-mix-for-grassland-habitat
+    intervention_templates:
+      - grassland-habitat
+    payment: { type: per_area, amount: 890.02, currency: GBP, unit: hectare }
+    eligibility_rules:
+      - id: gr1-required
+        kind: human_confirmation
+        description: Can only be used with GR1 create or restore grassland habitat and Natural England adviser approval.
+      - id: local-native-propagule-check
+        kind: human_confirmation
+        description: Use wildflower-rich seed mix, green hay, or plug plants agreed with adviser; wildflower seed should be native British origin.
+    evidence_requirements:
+      - { id: adviser-approval, phase: application, evidence_type: adviser_support, description: Copy of advice from adviser. }
+      - { id: seed-or-green-hay-record, phase: claim, evidence_type: seed_mix_record, description: "Record of seed mix, green hay, or plug plants used." }
+      - { id: consents, phase: claim, evidence_type: permission_document, description: Any relevant consents and permissions. }
+      - { id: invoices, phase: claim, evidence_type: invoice_or_bank_statement, description: Receipted invoices or bank statements where needed. }

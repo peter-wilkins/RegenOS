@@ -1,0 +1,44 @@
+id: wetland-restoration
+name: Wetland restoration
+type: water_and_habitat
+description: Restore or create wet habitat by raising water levels, creating scrapes, restoring ditches, improving water bodies, or treating diffuse runoff.
+
+suitable_when:
+  - land naturally wants to hold water
+  - wet habitat or water quality is a priority
+  - adviser support or an agreed plan is available
+  - hydrology can be changed without causing avoidable harm
+
+avoid_when:
+  - water source is polluted and cannot be addressed
+  - protected habitat, species, peat, or archaeology constraints are unresolved
+  - downstream flood, neighbour, road, or drainage impacts are unclear
+  - ongoing management cannot be provided
+
+typical_tasks:
+  - site survey
+  - hydrology and constraint check
+  - adviser review
+  - consent check
+  - take before photos
+  - record GPS boundary or feature
+  - agree specification
+  - complete works
+  - take after photos
+  - schedule monitoring
+
+required_evidence:
+  - adviser_support
+  - plan_or_feasibility_study
+  - before_photo
+  - gps_boundary_or_location
+  - consent_or_permission_record
+  - invoice_or_labour_record
+  - after_photo
+  - monitoring_note
+
+maintenance:
+  - inspect water levels
+  - monitor vegetation and invasive species
+  - check erosion or blocked structures
+  - keep annual management records

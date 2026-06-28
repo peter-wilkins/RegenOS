@@ -56,6 +56,10 @@ def evaluate_rule(rule: dict[str, Any], facts: dict[str, Any]) -> dict[str, str]
         passed = value < expected
     elif operator == "less_than_or_equal":
         passed = value <= expected
+    elif operator == "greater_than":
+        passed = value > expected
+    elif operator == "greater_than_or_equal":
+        passed = value >= expected
     elif operator == "equals":
         passed = value == expected
     else:
@@ -101,11 +105,14 @@ def render_markdown(candidates: list[dict[str, Any]]) -> str:
         option = candidate["option"]
         payment = option.get("payment", {})
         amount = payment.get("amount")
-        payment_text = (
-            f"{amount} {payment.get('currency', '')} per {payment.get('unit', '')}".strip()
-            if amount is not None
-            else f"{payment.get('type', 'unknown')} payment"
-        )
+        if payment.get("type") == "percent_actual_cost" and amount is not None:
+            payment_text = f"{amount}% of actual costs"
+        else:
+            payment_text = (
+                f"{amount} {payment.get('currency', '')} per {payment.get('unit', '')}".strip()
+                if amount is not None
+                else f"{payment.get('type', 'unknown')} payment"
+            )
         lines.extend(
             [
                 f"## {option.get('name')}",

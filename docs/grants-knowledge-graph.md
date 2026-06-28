@@ -26,6 +26,7 @@ Grant guidance is not one flat table. It links:
 - claims
 - lifecycle gates
 - submission tasks
+- public examples and lessons
 
 The useful graph is the set of links between those things.
 
@@ -138,6 +139,46 @@ Examples:
 - maintenance remains active through the durability period
 
 Lifecycle gates should become visible JobDone tasks and warnings.
+
+### Public example
+
+A public example is a completed or in-progress real-world project, case study,
+photo set, video, location, monitoring note, or failure report.
+
+Examples are deliberately separate from funding options:
+
+- a funding option says what may be paid for
+- an example says what someone actually did and what can be learned
+
+Useful fields:
+
+- `id`
+- `title`
+- `location`
+- `source_urls`
+- `media_types`
+- `related_intervention_templates`
+- `likely_relevant_options`
+- `learnings`
+
+Examples should include failures and maintenance lessons where possible. A dam
+that washed out, a pond that polluted, a tree planting that failed because of
+browsing, or a grassland seed mix that failed because fertility stayed too high
+is valuable knowledge.
+
+The first curated file is:
+
+- `data/grants/uk-england/public-examples.yaml`
+
+### Lifecycle task guide
+
+Generated JobDone lifecycle tasks should link to short practical guidance. The
+current guide is:
+
+- [`docs/grant-lifecycle-task-guide.md`](grant-lifecycle-task-guide.md)
+
+Keep this guidance generic and reusable. Do not duplicate long how-to text in
+every funding option.
 
 ## First useful queries
 
@@ -265,3 +306,4 @@ not as confirmation that a grant application will succeed.
 Related lifecycle model:
 
 - [`docs/grant-lifecycle.md`](grant-lifecycle.md)
+- [`docs/grant-lifecycle-task-guide.md`](grant-lifecycle-task-guide.md)

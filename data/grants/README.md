@@ -43,6 +43,20 @@ options:
 
 Keep early files approximate, but mark their status clearly.
 
+Validate grant records after editing:
+
+```bash
+python3 scripts/validate_grant_data.py
+```
+
+This catches common YAML mistakes such as unquoted comma text inside inline
+records, duplicate IDs, unsupported rule operators, and malformed public
+example records.
+
+Public examples and lessons live beside grant records, but they are not grant
+rules. They are case studies, photos, videos, locations, or failure notes that
+help humans and agents understand what good work looks like.
+
 ## First query
 
 The first local query is intervention-first:

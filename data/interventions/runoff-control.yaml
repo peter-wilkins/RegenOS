@@ -1,0 +1,42 @@
+id: runoff-control
+name: Runoff control
+type: natural_flood_management
+description: Slow, spread, settle, divert, or temporarily store surface runoff so water and sediment do less harm downstream.
+
+suitable_when:
+  - water visibly concentrates after rain
+  - runoff carries soil, nutrients, or sediment
+  - safe overflow route exists
+  - water can be slowed without damaging neighbours, roads, buildings, drains, or protected habitat
+
+avoid_when:
+  - flow path could redirect water toward buildings, roads, or neighbouring land
+  - main river or high-risk watercourse needs professional design
+  - consent, drainage, or pollution obligations are unclear
+  - archaeology, protected habitat, utilities, or public access constraints are unresolved
+
+typical_tasks:
+  - identify runoff path
+  - check downstream risk
+  - check permissions and consents
+  - take before photos
+  - record GPS point or line
+  - record dimensions
+  - build runoff feature
+  - take after photos
+  - inspect after first heavy rain
+
+required_evidence:
+  - before_photo
+  - gps_location_or_line
+  - dimensions
+  - consent_or_permission_record
+  - invoice_or_labour_record
+  - after_photo
+  - post_rain_inspection
+
+maintenance:
+  - inspect after storms
+  - remove excessive silt if needed
+  - repair erosion around edges
+  - check downstream impact

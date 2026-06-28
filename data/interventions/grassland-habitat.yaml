@@ -1,0 +1,42 @@
+id: grassland-habitat
+name: Grassland habitat
+type: habitat_restoration
+description: Create or restore grassland habitat using management change, seed mix, green hay, plug plants, or other adviser-approved methods.
+
+suitable_when:
+  - soil fertility and current sward make restoration plausible
+  - grazing or cutting management can be sustained
+  - target habitat and species are clear
+  - seed source or green hay is locally appropriate
+
+avoid_when:
+  - nutrient levels are too high and no plan exists to reduce fertility
+  - follow-up grazing or cutting cannot happen
+  - archaeology, protected species, or existing priority habitat could be damaged
+  - seed source is poorly matched to soil, hydrology, or local ecology
+
+typical_tasks:
+  - assess existing sward
+  - check soil fertility and wetness
+  - agree target habitat
+  - choose seed or green hay source
+  - prepare ground if needed
+  - sow or spread material
+  - take after photos
+  - plan grazing or cutting
+  - monitor establishment
+
+required_evidence:
+  - adviser_support
+  - seed_mix_record
+  - before_photo
+  - gps_boundary
+  - invoice_or_labour_record
+  - after_photo
+  - monitoring_note
+
+maintenance:
+  - graze or cut at agreed times
+  - avoid fertiliser unless specifically advised
+  - monitor undesirable species
+  - review species establishment over several years

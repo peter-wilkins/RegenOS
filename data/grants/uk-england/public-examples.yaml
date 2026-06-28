@@ -1,0 +1,192 @@
+id: uk-england.public-restoration-examples
+name: Public restoration examples and learnings
+jurisdiction: uk-england
+status: draft
+last_checked: "2026-06-28"
+notes:
+  - These are public examples, not proof that the same work is eligible for a specific grant.
+  - Prefer examples with photos, videos, locations, monitoring, costs, or honest lessons.
+  - Failure and maintenance records are useful because they improve future design and budgeting.
+
+examples:
+  - id: dorset.kingcombe-water-for-wildlife
+    title: Water for Wildlife at Kingcombe Meadows
+    location:
+      region: Dorset
+      public_location: Kingcombe National Nature Reserve
+      precision: public_site
+    source_urls:
+      - https://www.dorsetwildlifetrust.org.uk/blog/colleen-smith-moore/water-wildlife-pond-creation-and-river-restoration-kingcombe-meadows
+    media_types:
+      - photos
+      - article
+    related_intervention_templates:
+      - pond
+      - check-dam
+      - wetland-restoration
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/wn12-create-or-restore-ponds-up-to-2ha
+      - uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+      - uk-england.capital-grants-2026/rp33-large-leaky-woody-dams
+    learnings:
+      - Combines pond creation, river restoration, and woody debris in one landscape story.
+      - Useful visual reference for what public-facing water restoration work looks like in Dorset.
+      - Treat as inspiration; grant eligibility and land context still need separate checks.
+
+  - id: dorset.brit-natural-flood-management
+    title: River Brit Natural Flood Management Project
+    location:
+      region: Dorset
+      public_location: Brit catchment
+      precision: catchment
+    source_urls:
+      - https://dorset-nl.org.uk/brit-nfm-project/
+    media_types:
+      - project_page
+      - photos
+    related_intervention_templates:
+      - check-dam
+      - runoff-control
+      - wetland-restoration
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+      - uk-england.capital-grants-2026/rp33-large-leaky-woody-dams
+      - uk-england.capital-grants-2026/rp11-swales
+      - uk-england.capital-grants-2026/rp12-check-dams
+    learnings:
+      - Good local Dorset reference for natural flood management as a catchment-scale intervention.
+      - Useful for field-walk language: slow the flow, reduce downstream risk, and work with landowners.
+
+  - id: dorset.peat-partnership
+    title: Dorset Peat Partnership
+    location:
+      region: Dorset
+      public_location: Purbeck heath and peat sites
+      precision: public_project_area
+    source_urls:
+      - https://dorset-nl.org.uk/dorset-peat-partnership/
+      - https://www.theguardian.com/environment/2024/feb/21/floating-spiders-and-insect-eating-plants-leaky-dams-revive-dorsets-bogs
+    media_types:
+      - project_page
+      - article
+      - photos
+    related_intervention_templates:
+      - wetland-restoration
+      - water-control-structure
+      - check-dam
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/wn1-grip-blocking-drainage-channels
+      - uk-england.capital-grants-2026/wn10-construction-of-water-penning-structures
+      - uk-england.capital-grants-2026/wn11-temporary-water-storage-features
+    learnings:
+      - Shows rewetting through ditch blocking, bunds, and porous dams in a Dorset context.
+      - Good example of grant stacking and partnership funding, not just one capital item.
+      - Monitoring ecological response matters; water pooling quickly is not the whole success measure.
+
+  - id: freshwater-habitats.water-friendly-farming-leaky-dams
+    title: Water Friendly Farming leaky dams lessons learnt
+    location:
+      region: UK
+      public_location: case study catchments
+      precision: catchment_or_project
+    source_urls:
+      - https://freshwaterhabitats.b-cdn.net/app/uploads/2025/07/fht-leaky-dams-final.pdf
+    media_types:
+      - pdf
+      - photos
+      - lessons
+    related_intervention_templates:
+      - check-dam
+      - runoff-control
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+      - uk-england.capital-grants-2026/rp33-large-leaky-woody-dams
+      - uk-england.capital-grants-2026/rp12-check-dams
+    learnings:
+      - Clarifies differences between leaky barriers and other woody structures.
+      - Useful for deciding what photos and measurements to capture before and after work.
+      - Lessons learnt document should be mined for failure modes before designing a dam checklist.
+
+  - id: fwag-sw.leaky-dams-river-condition-assessment
+    title: Leaky dams and river condition assessment
+    location:
+      region: South West England
+      public_location: public case study
+      precision: project
+    source_urls:
+      - https://fwagsw.org.uk/case-study-leaky-dams-and-river-condition-assessment/
+    media_types:
+      - article
+      - photos
+      - before_after
+      - monitoring
+    related_intervention_templates:
+      - check-dam
+      - runoff-control
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/rp32-small-leaky-woody-dams
+      - uk-england.capital-grants-2026/rp33-large-leaky-woody-dams
+    learnings:
+      - Before/after photos several years apart are useful for judging long-term channel response.
+      - River condition assessment can provide more evidence than visual inspection alone.
+
+  - id: dorset.wildflower-meadow-creation-plush
+    title: Wildflower meadow creation through Farming in Protected Landscapes
+    location:
+      region: Dorset
+      public_location: Plush Paddock
+      precision: public_project
+    source_urls:
+      - https://dorset-nl.org.uk/fipl/wildflower-meadow-creation/
+    media_types:
+      - project_page
+      - photos
+    related_intervention_templates:
+      - grassland-habitat
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/gr1-create-or-restore-grassland-habitat
+      - uk-england.capital-grants-2026/gr2-standard-seed-mix-for-grassland-habitat
+      - uk-england.capital-grants-2026/gr3-floristically-enhanced-seed-mix-for-grassland-habitat
+    learnings:
+      - Local Dorset example for meadow creation funding and public communication.
+      - Useful reminder that grassland work needs follow-up management, not just seed purchase.
+
+  - id: agricology.seed-sources-grassland-restoration
+    title: Seed sources for grassland restoration
+    location:
+      region: UK
+      public_location: guidance resource
+      precision: guidance
+    source_urls:
+      - https://agricology.co.uk/resource/seed-sources-grassland-restoration/
+    media_types:
+      - guidance
+    related_intervention_templates:
+      - grassland-habitat
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/gr2-standard-seed-mix-for-grassland-habitat
+      - uk-england.capital-grants-2026/gr3-floristically-enhanced-seed-mix-for-grassland-habitat
+    learnings:
+      - Compare natural regeneration, green hay, directly harvested seed, and commercial native seed.
+      - Seed source choice should be part of the evidence and design record.
+
+  - id: forestry-commission.trees-on-farms-success-stories
+    title: Trees on farms success stories for nature and people
+    location:
+      region: England
+      public_location: case study farms
+      precision: case_studies
+    source_urls:
+      - https://forestrycommission.blog.gov.uk/2022/11/21/trees-on-farms-success-stories-for-nature-and-people/
+    media_types:
+      - article
+      - photos
+    related_intervention_templates:
+      - tree-planting
+    likely_relevant_options:
+      - uk-england.capital-grants-2026/te4-supply-and-plant-tree
+      - uk-england.capital-grants-2026/af1-plant-agroforestry-woodland-tree
+      - uk-england.capital-grants-2026/af2-plant-agroforestry-fruit-tree
+    learnings:
+      - Useful framing for tree planting as part of a working farm, not land abandonment.
+      - Capture business purpose, livestock/crop interaction, and maintenance plan alongside biodiversity claims.

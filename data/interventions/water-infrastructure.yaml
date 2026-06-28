@@ -1,0 +1,41 @@
+id: water-infrastructure
+name: Water infrastructure
+type: water_management
+description: Install practical water-management infrastructure such as crossings, culverts, drains, pipework, or trough-related works.
+
+suitable_when:
+  - existing livestock, machinery, or farmyard use is damaging soil or water
+  - a hard crossing or pipe will reduce erosion, poaching, or pollution
+  - access and maintenance are practical
+  - permissions and drainage responsibilities are understood
+
+avoid_when:
+  - feature would speed polluted water into a watercourse
+  - fish passage, flood risk, or drainage impacts are unclear
+  - a softer nature-based intervention would solve the issue with less maintenance
+  - long-term inspection responsibility is unclear
+
+typical_tasks:
+  - identify infrastructure need
+  - check watercourse and drainage responsibilities
+  - check permissions and consents
+  - take before photos
+  - record GPS location
+  - install infrastructure
+  - take after photos
+  - record dimensions and materials
+  - schedule inspection
+
+required_evidence:
+  - before_photo
+  - gps_location
+  - consent_or_permission_record
+  - invoice_or_labour_record
+  - after_photo
+  - dimensions
+
+maintenance:
+  - inspect after heavy rain
+  - clear blocked pipes or drains safely
+  - check erosion at inlets and outlets
+  - repair damaged surfaces or banks
